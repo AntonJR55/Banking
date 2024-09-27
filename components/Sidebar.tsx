@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { sidebarLinks } from "@/constants";
 import { cn } from "@/lib/utils";
 
@@ -24,6 +24,7 @@ const Sidebar = ({ user }: SidebarProps) => {
                     />
                     <h1 className="sidebar-logo">Horizon</h1>
                 </Link>
+
                 {sidebarLinks.map((item) => {
                     const isActive =
                         pathname === item.route ||
@@ -57,9 +58,7 @@ const Sidebar = ({ user }: SidebarProps) => {
                         </Link>
                     );
                 })}
-                USER
             </nav>
-            FOOTER
         </section>
     );
 };
